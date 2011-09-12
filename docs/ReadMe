@@ -23,7 +23,7 @@ Library
 Theme
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/public
-    git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git theme
+    git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git public/theme
 
 Module
 
