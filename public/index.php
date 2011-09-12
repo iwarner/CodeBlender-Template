@@ -5,9 +5,10 @@
  *
  * @category  CodeBlender
  * @package   CodeBlender
- * @copyright Copyright (c) 2000-2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
+
 // Define application environment - this should be setup in the Apache Virtualhost
 defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 

@@ -1,11 +1,43 @@
+
+INTRODUCTION
+------------
+
+The following file will guide you with the set up of the CodeBlender project.
+
+This template will setup the administration project CodeBlender provides.
+
 GIT SUBMODULE SETUP
 -------------------
 
-http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
-
 Repository must be a GIT repository to activate submodules
 
-Library
-cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
-git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
+Article
 
+    http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
+
+Library
+
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
+    git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
+
+Theme
+
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/public
+    git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git theme
+
+Module
+
+Layouts
+
+ZEND FRAMEWORK SYMLINK
+----------------------
+
+Zend should be included from your local system.
+It does not come part of the CodeBlender library.
+
+Please download from here:
+    http://framework.zend.com/download/latest
+
+Library
+
+    ln -s "/Users/iwarner/Triangle/CodeBlender/library/Zend" /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
