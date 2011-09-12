@@ -11,6 +11,10 @@ GIT SUBMODULE SETUP
 
 How to setup GIT
 
+Set to follow Master branch
+
+    git branch --set-upstream master origin/master
+
 Repository must be a GIT repository to activate submodules
 
 Article
@@ -18,6 +22,8 @@ Article
     http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
 
 Library
+
+# git submodule add git@<server_url>:<submodule_name>.git <your_folder>
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
