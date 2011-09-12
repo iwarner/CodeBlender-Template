@@ -41,7 +41,11 @@ Layout
     git remote add origin git@github.com/iwarner/CodeBlender-LayoutsAdmin.git
     git submodule update --init --recursive
 
-    git pull origin master
+    git commit ./application/layouts -m "updating layouts"
+    git commit ./application/layouts -m "updating layouts"
+    git pull ./application/layouts
+
+    git pull git@github.com:iwarner/CodeBlender-LayoutsAdmin.git
     git push git@github.com:iwarner/CodeBlender-LayoutsAdmin.git
 
 Theme
