@@ -21,27 +21,27 @@ Article
 
     http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
 
-Library
 
-# git submodule add git@<server_url>:<submodule_name>.git <your_folder>
+Directory
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
+
+Library
+
     git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
 
 Modules
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender-ModuleCore.git application/modules/core
     git submodule add git://github.com/iwarner/CodeBlender-ModuleUser.git application/modules/user
 
 Layout
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/layouts
+    git clone git@url.com:superproject.git
 
 Theme
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git public/theme
 
 
