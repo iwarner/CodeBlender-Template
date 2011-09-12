@@ -20,14 +20,19 @@ Library
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
     git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
 
+Modules
+
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules
+    git submodule add git://github.com/iwarner/CodeBlender-ModuleCore.git application/modules/core
+    git submodule add git://github.com/iwarner/CodeBlender-ModuleUser.git application/modules/user
+
+Layout
+
 Theme
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/public
     git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git public/theme
 
-Module
-
-Layouts
 
 ZEND FRAMEWORK SYMLINK
 ----------------------
