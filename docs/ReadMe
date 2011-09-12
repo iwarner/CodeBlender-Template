@@ -38,7 +38,11 @@ Modules
 Layout
 
     git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/layouts
-    git submodule update
+    git remote add origin git@github.com/iwarner/CodeBlender-LayoutsAdmin.git
+    git submodule update --init --recursive
+
+    git pull origin master
+    git push git@github.com:iwarner/CodeBlender-LayoutsAdmin.git
 
 Theme
 
