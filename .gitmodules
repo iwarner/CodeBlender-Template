@@ -1,0 +1,3 @@
+[submodule "library/CodeBlender"]
+	path = library/CodeBlender
+	url = git://github.com/iwarner/CodeBlender.git
