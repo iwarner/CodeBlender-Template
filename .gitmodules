@@ -1,3 +1,6 @@
 [submodule "library/CodeBlender"]
 	path = library/CodeBlender
 	url = git://github.com/iwarner/CodeBlender.git
+[submodule "public/theme"]
+	path = public/theme
+	url = git://github.com/iwarner/CodeBlender-ThemeAdmin.git
