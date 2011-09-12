@@ -1,9 +1,11 @@
 GIT SUBMODULE SETUP
 -------------------
 
+http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
+
 Repository must be a GIT repository to activate submodules
 
 Library
-cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/
-git submodule add git://github.com/iwarner/CodeBlender.git CodeBlender
+cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
+git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
 
