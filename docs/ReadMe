@@ -1,0 +1,9 @@
+GIT SUBMODULE SETUP
+-------------------
+
+Repository must be a GIT repository to activate submodules
+
+Library
+cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/
+git submodule add git://github.com/iwarner/CodeBlender.git CodeBlender
+
