@@ -4,8 +4,8 @@
  * CodeBlender
  *
  * @category  CodeBlender
- * @package   BootStrap
- * @copyright Copyright (c) 2000-2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
 
@@ -13,9 +13,11 @@
  * Bootstrap
  *
  * @category  CodeBlender
- * @package   BootStrap
- * @copyright Copyright (c) 2000-2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
+ *
+ * @todo Make these entries into Resource plugins
  */
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {

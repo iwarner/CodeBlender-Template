@@ -4,7 +4,7 @@
  * Index
  *
  * @category  CodeBlender
- * @package   CodeBlender
+ * @package   Template
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */

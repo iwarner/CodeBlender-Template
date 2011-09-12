@@ -3,62 +3,9 @@
  * View
  *
  * @category  CodeBlender
- * @package   CodeBlender
- * @copyright Copyright (c) 2000-2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-// Create the required Meta Elements
-$this->title = 'CodeBlender - application level abstraction for Zend Framework';
-$this->headMeta()->setName('description', $this->title);
-$this->headMeta()->setName('keywords', 'codeblender application php mysql development abstraction Zend Framework');
-
-$this->ogTitle = 'CodeBlender';
-$this->ogDescription = 'CodeBlender - application level abstraction for Zend Framework';
-$this->ogURL = 'http://www.codeblender.net/';
-$this->ogImage = '/facebook-logo.jpg';
-
-// Render the Strap line
-echo $this->layout_StrapLine('CodeBlender is a PHP5 application level extension to Zend Framework');
-?>
-
-<div id="content">
-
-    <h2>
-        CodeBlender is an application level extension to Zend Framework.
-        It strives to provide full working sites straight out of the box.
-        Also includes templates for Facebook applications; administration portals and secure pages.
-        Still very much in the Alpha stage we are looking for developers and users to contribute ideas
-    </h2>
-
-    <h3>Features</h3>
-
-    <p>
-        Our focus is on the production of web solutions for businesses or individuals to help them
-        realise the potential of the Internet through
-        <a href="/social" title="Social applications">social applications</a>; social marketing; mobile SMS services;
-        e-commerce and email.
-    </p>
-
-</div>
-
-<div id="sideColumn">
-
-    <div class="featuresList">
-
-        <ul>
-
-            <li class="featureTwitter">
-                <b>Follow us on Twitter</b>. To keep up with the latest goings on at Triangle HQ.<br /><br />
-            </li>
-
-            <li class="featureFacebook">
-                <b>Social Development</b>. Networks such as Facebook can be utilised for building strong and instant brand awareness. Creation of
-                pages and applications coupled with intelligent seeding can assist traditional campaigns. Utilising analytics we can track
-                and target further promotions to this user base. <a href="/social" title="Social development">More...</a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</div>
+// Register Placeholders
+$this->title = 'Dashboard';
