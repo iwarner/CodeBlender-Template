@@ -6,14 +6,23 @@ The following file will guide you with the set up of the CodeBlender project.
 
 This template will setup the administration project CodeBlender provides.
 
-GIT SUBMODULE SETUP
--------------------
+GIT SETUP
+---------
 
-How to setup GIT
+Guide
 
 Set to follow Master branch
 
     git branch --set-upstream master origin/master
+
+Commands
+
+    git commit -a -m ""
+    git pull
+    git push
+
+GIT SUBMODULE SETUP
+-------------------
 
 Repository must be a GIT repository to activate submodules
 
@@ -21,35 +30,46 @@ Article
 
     http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
 
-
 Directory
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
 
 Library
 
-    git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
-    git submodule update --init --recursive
+    CodeBlender
 
-    git pull git@github.com:iwarner/CodeBlender.git
+        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library/CodeBlender
+        git submodule add git@github.com:iwarner/CodeBlender.git library/CodeBlender
+        git submodule update --init
 
 Modules
 
-    git submodule add git://github.com/iwarner/CodeBlender-ModuleCore.git application/modules/core
-    git submodule add git://github.com/iwarner/CodeBlender-ModuleUser.git application/modules/user
+    Core
+
+        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules/core
+        git submodule add git@github.com:iwarner/CodeBlender-ModuleCore.git application/modules/core
+        git submodule update --init
+
+    User
+
+        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules/user
+        git submodule add git@github.com:iwarner/CodeBlender-ModuleUser.git application/modules/user
+        git submodule update --init
 
 Layout
 
-    git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/layouts
-    git submodule update --init --recursive
+    Admin
 
-    git pull git@github.com:iwarner/CodeBlender-LayoutsAdmin.git
-    git push git@github.com:iwarner/CodeBlender-LayoutsAdmin.git
+        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/l
+        git submodule add git@github.com:iwarner/CodeBlender-LayoutsAdmin.git application/layouts
+        git submodule update --init
 
 Theme
 
-    git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git public/theme
+    Admin
 
+        git submodule add git@github.com:iwarner/CodeBlender-ThemeAdmin.git public/theme
+        git submodule update --init
 
 ZEND FRAMEWORK SYMLINK
 ----------------------
