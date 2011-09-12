@@ -9,6 +9,8 @@ This template will setup the administration project CodeBlender provides.
 GIT SUBMODULE SETUP
 -------------------
 
+How to setup GIT
+
 Repository must be a GIT repository to activate submodules
 
 Article
