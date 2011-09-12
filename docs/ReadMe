@@ -38,7 +38,7 @@ Modules
 Layout
 
     git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/layouts
-    git clone git@url.com:superproject.git
+    git submodule update
 
 Theme
 
