@@ -28,6 +28,9 @@ Modules
 
 Layout
 
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules
+    git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/modules/user
+
 Theme
 
     cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/public
