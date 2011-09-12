@@ -17,23 +17,23 @@ Article
 
 Library
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
 
 Modules
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender-ModuleCore.git application/modules/core
     git submodule add git://github.com/iwarner/CodeBlender-ModuleUser.git application/modules/user
 
 Layout
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application
-    git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
+    git submodule add git://github.com/iwarner/CodeBlender-LayoutsAdmin.git application/layouts
 
 Theme
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/public
+    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
     git submodule add git://github.com/iwarner/CodeBlender-ThemeAdmin.git public/theme
 
 

@@ -10,3 +10,6 @@
 [submodule "application/modules/user"]
 	path = application/modules/user
 	url = git://github.com/iwarner/CodeBlender-ModuleUser.git
+[submodule "application/layouts"]
+	path = application/layouts
+	url = git://github.com/iwarner/CodeBlender-LayoutsAdmin.git
