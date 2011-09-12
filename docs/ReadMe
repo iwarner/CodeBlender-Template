@@ -31,6 +31,8 @@ Library
     git submodule add git://github.com/iwarner/CodeBlender.git library/CodeBlender
     git submodule update --init --recursive
 
+    git pull git@github.com:iwarner/CodeBlender.git
+
 Modules
 
     git submodule add git://github.com/iwarner/CodeBlender-ModuleCore.git application/modules/core
