@@ -2,27 +2,100 @@
 INTRODUCTION
 ------------
 
-The following file will guide you with the set up of the CodeBlender project.
+The following file will guide you through the set up of this project.
 
-This template will setup the administration project CodeBlender provides.
+Note
+
+    Your local machine should Include the vHost file from this project.
+
+        Include "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/config/vhost.conf"
+
+    Create the necessary hosts entry in /etc/hosts
+
+        127.0.0.1 template.codeblender.net.dev
+
+
+SSH KEY SETUP
+-------------
+
+GitHub requires ssh key access - follow the the links below for guidance
+
+    http://help.github.com/mac-set-up-git/
+    http://om4.com.au/ssh-rsa-key-pairs-passphrases-leopard/
+
+
+LOCAL DATA DIRECTORY
+--------------------
+
+Create symlinks on your local for the following directories.
+These will mimic the live environment.
+
+    sudo mkdir /var /var/www "/var/www/Triangle Solutions Ltd" "/var/www/Triangle Solutions Ltd/template.codeblender.net"
+    sudo chown -R iwarner "/var/www/Triangle Solutions Ltd/template.codeblender.net"
+
+Project Folder
+
+    ln -s "/Users/iwarner/Triangle/01. Triangle Solutions Ltd/Sites A-C/CodeBlender/template.codeblender.net/www" "/var/www/Triangle Solutions Ltd/template.codeblender.net/"
+
+Zend Framework
+
+    mkdir /var/www/library
+    ln -s /Users/iwarner/Triangle/CodeBlender/library/Zend /var/www/library/Zend
+
 
 GIT SETUP
 ---------
 
 Guide
 
-Set to follow Master branch
+    cd "/var/www/Triangle Solutions Ltd/template.codeblender.net/www"
 
+New Git Repository
+
+    git init
+    git remote add origin git@github.com:iwarner/CodeBlender-Template.git
+    git push -u origin master
+
+Clone Repository
+
+    git clone git@github.com:iwarner/CodeBlender-Template.git www
     git branch --set-upstream master origin/master
 
 Commands
 
     git commit -a -m ""
-    git pull
-    git push
+    git pull -u origin master
+    git push -u origin master
+
+
+GIT IGNORE
+----------
+
+    nano .gitignore
+
+    # OS generated files #
+    ######################
+    .DS_Store
+    Thumbs.db
+    /data/cache/*
+    /data/logs/*
+    /data/sessions/*
+    !.gitignore
+
 
 GIT SUBMODULE SETUP
 -------------------
+
+This is only necessary if the project is created from scratch, otherwise if cloning
+an existing repository the project will already have links for the submodules.
+
+    git submodule init
+    git submodule update
+
+To pull from the master on all submodules from the root user:
+
+    git submodule foreach git pull -u origin master
+    git submodule foreach git push -u origin master
 
 Repository must be a GIT repository to activate submodules
 
@@ -30,56 +103,97 @@ Article
 
     http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
 
-Directory
+Local Directory
 
-    cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www
+    cd "/var/www/Triangle Solutions Ltd/template.codeblender.net/www"
 
 Library
 
     CodeBlender
 
-        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library/CodeBlender
         git submodule add git@github.com:iwarner/CodeBlender.git library/CodeBlender
         git submodule update --init
+
+    Zend Framework
+
+        ln -s "/var/www/library/Zend" "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/library"
 
 Modules
 
     Core
 
-        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules/core
         git submodule add git@github.com:iwarner/CodeBlender-ModuleCore.git application/modules/core
         git submodule update --init
 
     User
 
-        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/modules/user
         git submodule add git@github.com:iwarner/CodeBlender-ModuleUser.git application/modules/user
         git submodule update --init
 
 Layout
 
-    Admin
-
-        cd /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/application/l
-        git submodule add git@github.com:iwarner/CodeBlender-LayoutsAdmin.git application/layouts
-        git submodule update --init
+    git submodule add git@github.com:iwarner/CodeBlender-Layouts.git application/layouts
+    git submodule update --init
 
 Theme
 
-    Admin
+    git submodule add git@github.com:iwarner/CodeBlender-Themes.git public/theme
+    git submodule update --init
 
-        git submodule add git@github.com:iwarner/CodeBlender-ThemeAdmin.git public/theme
-        git submodule update --init
 
-ZEND FRAMEWORK SYMLINK
-----------------------
+REMOVE SUBMODULES
+-----------------
+
+Edit the .git/config and remove the link
+Edit the .gitmodules and remove the links
+
+Clear the cache for the submodules
+
+    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/layouts"
+    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public/theme"
+    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/modules/user"
+    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/modules/core"
+    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/library/CodeBlender"
+
+Delete the folders
+
+    rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/layouts"
+    rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public/theme"
+
+
+GIT REVERT CHANGES
+------------------
+
+    http://book.git-scm.com/4_undoing_in_git_-_reset,_checkout_and_revert.html
+
+Fix one file
+
+    git checkout -- .gitignore
+
+Fixing un-committed mistakes
+
+    git reset --hard HEAD
+
+
+EXT JS
+------
+
+
+ZEND FRAMEWORK
+--------------
 
 Zend should be included from your local system.
 It does not come part of the CodeBlender library.
 
 Please download from here:
+
     http://framework.zend.com/download/latest
 
-Library
 
-    ln -s "/Users/iwarner/Triangle/CodeBlender/library/Zend" /Users/iwarner/Triangle/01.\ Triangle\ Solutions\ Ltd/Sites\ A-C/CodeBlender/Template/www/library
+DATA DIRECTORY
+--------------
+
+This directory and all its submodules must be writable by the web server
+
+    sudo chown -R iwarner:www-data "/var/www/Triangle Solutions Ltd" "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/data"
+    sudo chmod -R g+w "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/data"

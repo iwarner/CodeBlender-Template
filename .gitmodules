@@ -1,6 +1,3 @@
-[submodule "application/layouts"]
-	path = application/layouts
-	url = git://github.com/iwarner/CodeBlender-LayoutsAdmin.git
 [submodule "library/CodeBlender"]
 	path = library/CodeBlender
 	url = git://github.com/iwarner/CodeBlender.git
@@ -10,6 +7,9 @@
 [submodule "application/modules/user"]
 	path = application/modules/user
 	url = git@github.com:iwarner/CodeBlender-ModuleUser.git
+[submodule "application/layouts"]
+	path = application/layouts
+	url = git@github.com:iwarner/CodeBlender-Layouts.git
 [submodule "public/theme"]
 	path = public/theme
-	url = git@github.com:iwarner/CodeBlender-ThemeAdmin.git
+	url = git@github.com:iwarner/CodeBlender-Themes.git
