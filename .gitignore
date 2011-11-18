@@ -4,3 +4,4 @@ Thumbs.db
 /data/logs/*
 /data/sessions/*
 !.gitignore
+/public/.sass-cache
