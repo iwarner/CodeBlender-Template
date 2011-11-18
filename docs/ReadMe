@@ -35,7 +35,7 @@ These will mimic the live environment.
 
 Project Folder
 
-    ln -s "/Users/iwarner/Triangle/01. Triangle Solutions Ltd/Sites A-C/CodeBlender/template.codeblender.net/www" "/var/www/Triangle Solutions Ltd/template.codeblender.net/"
+    ln -s "/Users/iwarner/Dropbox/01. Triangle Solutions/Sites A-C/CodeBlender/template.codeblender.net/www" "/var/www/Triangle Solutions Ltd/template.codeblender.net/"
 
 Zend Framework
 
@@ -73,8 +73,6 @@ GIT IGNORE
 
     nano .gitignore
 
-    # OS generated files #
-    ######################
     .DS_Store
     Thumbs.db
     /data/cache/*
@@ -125,11 +123,6 @@ Modules
         git submodule add git@github.com:iwarner/CodeBlender-ModuleCore.git application/modules/core
         git submodule update --init
 
-    User
-
-        git submodule add git@github.com:iwarner/CodeBlender-ModuleUser.git application/modules/user
-        git submodule update --init
-
 Layout
 
     git submodule add git@github.com:iwarner/CodeBlender-Layouts.git application/layouts
@@ -151,14 +144,14 @@ Clear the cache for the submodules
 
     git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/layouts"
     git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public/theme"
-    git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/modules/user"
     git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/modules/core"
     git rm --cached "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/library/CodeBlender"
 
 Delete the folders
 
-    rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/layouts"
-    rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public/theme"
+    sudo rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/layouts"
+    sudo rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public/theme"
+    sudo rm -r "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/application/modules/core"
 
 
 GIT REVERT CHANGES
@@ -177,6 +170,8 @@ Fixing un-committed mistakes
 
 EXT JS
 ------
+
+    SymLink
 
 
 ZEND FRAMEWORK
@@ -197,3 +192,25 @@ This directory and all its submodules must be writable by the web server
 
     sudo chown -R iwarner:www-data "/var/www/Triangle Solutions Ltd" "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/data"
     sudo chmod -R g+w "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/data"
+
+
+COMPASS
+-------
+
+The Compass Stylesheet Authoring Framework helps you build and maintain your
+stylesheets and makes it easy for you to use stylesheet libraries provided by others.
+
+Install Compass
+
+    http://compass-style.org/install/
+
+    sudo gem update --system
+    sudo gem install compass
+    sudo gem install compass-validator
+
+Create / Watch Validate / Project
+
+    compass watch "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public"
+    compass create "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public"
+    compass compile "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public"
+    compass validate "/var/www/Triangle Solutions Ltd/template.codeblender.net/www/public"

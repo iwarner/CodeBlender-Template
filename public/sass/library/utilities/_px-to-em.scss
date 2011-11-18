@@ -1,0 +1,54 @@
+
+$FONT_SIZE_BROWSER: 16px !default;
+
+
+@mixin px-to-em($px, $base: $FONT_SIZE_BROWSER, $selector: font-size) {
+    // Check if we have supplied a unit
+    @if unitless($px) {
+        @warn "Assuming px #{$px} to be in pixels";
+        $px: 1px * $px;
+    }
+    @if unitless($base) {
+        @warn "Assuming base #{$base} to be in pixels";
+        $base: 1px * $base;
+    }
+
+    #{$selector}: ($px / $base) * 1em;
+}
+
+
+@mixin font-size-px-to-em($px, $base: $FONT_SIZE_BROWSER) {
+    @include px-to-em($px, $base, font-size);
+}
+
+@mixin line-height-em($font-size, $base-font-size, $base-line-height) {
+    $base-line-height: $base-line-height * $base-font-size;
+
+    $multiplier: 1;
+    @while $font-size > $base-line-height * $multiplier {
+
+        $multiplier: $multiplier + 1;
+    }
+
+    $bp: $base-line-height - $base-font-size;
+    $hp: ($base-line-height * $multiplier) - $font-size;
+
+    $margin:  ($hp - $bp) / $font-size;
+    $line-height: (($multiplier * $base-line-height) / $font-size) - abs($margin);
+
+
+    @if $margin < 0 {
+        $multiplier: $multiplier + 1;
+
+        $bp: $base-line-height - $base-font-size;
+        $hp: ($base-line-height * $multiplier) - $font-size;
+
+        $margin:  ($hp - $bp) / $font-size;
+        $line-height: (($multiplier * $base-line-height) / $font-size) - abs($margin);
+    }
+
+
+    @include px-to-em($font-size, $base-font-size, font-size);
+    line-height: $line-height;
+    margin-bottom: #{$margin}em;
+}

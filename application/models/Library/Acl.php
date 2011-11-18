@@ -28,6 +28,7 @@ class Default_Model_Library_Acl extends Zend_Acl
         // Default Module
         $this->add(new Zend_Acl_Resource('default'));
         $this->add(new Zend_Acl_Resource('defaultindex'));
+        $this->add(new Zend_Acl_Resource('defaulthelper'));
 
         // Core Module
         $this->add(new Zend_Acl_Resource('corecache'));
@@ -45,7 +46,7 @@ class Default_Model_Library_Acl extends Zend_Acl
         $this->deny('guest');
 
         // Rule #2: Guests can access the following pages
-        $this->allow('guest', array('userlogin'));
+        $this->allow('guest', array('userlogin', 'defaulthelper'));
 
         // Rule #1: Allow login to be accessible by anyone except logged in people
         $this->deny('administrator', array('userlogin'));

@@ -1,0 +1,15 @@
+//------------------------------------------------------------------------------
+// Cross browser min/max-width/height
+//------------------------------------------------------------------------------
+
+@mixin min-height($height) {
+    // Check if we have supplied a unit
+    @if unitless($height) {
+        @warn "Assuming height #{$height} to be in pixels";
+        $height: 1px * $height;
+    }
+
+    min-height: $height;
+    height: auto !important;
+    height: $height;
+}

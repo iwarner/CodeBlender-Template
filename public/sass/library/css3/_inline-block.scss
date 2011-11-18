@@ -1,0 +1,9 @@
+// Workaround to make the element behave as inline-block
+@mixin inline-block {
+    display: -moz-inline-box;	/* Firefox 2*/
+    display: inline-block;
+    vertical-align: top;
+
+    zoom: 1;			/* IE hasLayout */
+    *display: inline;	/* IE6/7 */
+}

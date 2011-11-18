@@ -1,0 +1,14 @@
+// https://developer.mozilla.org/en/CSS/opacity
+@mixin opacity($opacity: 1, $removeFilter: false) {
+    // Check if we haven't' supplied a unit
+    @if not unitless($opacity) {
+        @warn "Opacity #{$opacity} should not have a unit";
+    }
+
+    opacity: $opacity;
+    @if not $removeFilter {
+        filter: alpha(opacity=calc($opacity*100));
+        } else {
+        filter: "";
+    }
+}

@@ -1,0 +1,13 @@
+@mixin gradient-vertical($fromCol: #ffffff, $toCol: #ffffff, $fromPos: 0%, $toPos: 100%, $ie: false) {
+    background-color: $fromCol;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($fromPos, $fromCol), color-stop($toPos, $toCol));
+    background-image: -webkit-linear-gradient(top, $fromCol $fromPos, $toCol $toPos);
+    background-image: -moz-linear-gradient(top, $fromCol $fromPos, $toCol $toPos);
+    background-image: -ms-linear-gradient(top, $fromCol $fromPos, $toCol $toPos);
+    background-image: -o-linear-gradient(top, $fromCol $fromPos, $toCol $toPos);
+    background-image: linear-gradient(top, $fromCol $fromPos, $toCol $toPos);
+
+    @if $ie {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromCol}', EndColorStr='#{$toCol}', GradientType=0);
+    }
+}

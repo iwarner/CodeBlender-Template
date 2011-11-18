@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * View
+ *
+ * @category  CodeBlender
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @license   http://codeblender.net/license
+ */
+// Register Placeholders
+$this->title = 'Helpers';
+
+echo '<a href="' . $this->url(array('action' => 'facebook')) . '">Facebook</a><br />';
+echo '<a href="' . $this->url(array('action' => 'google')) . '">Google</a><br />';
+echo '<a href="' . $this->url(array('action' => 'message')) . '">Message</a><br />';
+echo '<a href="' . $this->url(array('action' => 'social')) . '">Social</a><br />';

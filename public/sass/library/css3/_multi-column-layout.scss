@@ -1,0 +1,50 @@
+// CSS3 Multi column layout
+// See http://www.css3.info/preview/multi-column-layout/
+@mixin column-width($width) {
+    // Check if we have supplied a unit
+    @if unitless($width) and $width != 0 {
+        @warn "Assuming width #{$width} to be in pixels";
+        $width: 1px * $width;
+    }
+
+    -webkit-column-width: $width;
+    -moz-column-width: $width;
+    column-width: $width;
+}
+
+@mixin column-count($count) {
+    // Check if we haven't supplied a unit
+    @if $count != auto {
+        @if not unitless($count) {
+            @warn "Column count should not have a unit #{$count}";
+        }
+    }
+
+    -webkit-column-count: $count;
+    -moz-column-count: $count;
+    column-count: $count;
+}
+
+@mixin column-rule($color, $style, $thickness) {
+    // Check if we have supplied a unit
+    @if unitless($thickness) and $thickness != 0 {
+        @warn "Assuming thickness #{$thickness} to be in pixels";
+        $width: 1px * $thickness;
+    }
+
+    -webkit-column-rule: $color $style $thickness;
+    -moz-column-rule: $color $style $thickness;
+    column-rule: $color $style $thickness;
+}
+
+@mixin column-gap($gap) {
+    // Check if we have supplied a unit
+    @if unitless($gap) and $gap != 0 {
+        @warn "Assuming gap #{$gap} to be in pixels";
+        $width: 1px * $gap;
+    }
+
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
+}

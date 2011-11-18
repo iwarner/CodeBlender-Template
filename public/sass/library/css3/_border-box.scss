@@ -1,0 +1,8 @@
+// CSS3 box-sizing: border-box for the browsers that support it.
+// Supported by Firefox 2+, Safari 3+, IE6/7 (with behaviour), IE8
+@mixin border-box() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}

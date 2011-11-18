@@ -1,0 +1,98 @@
+//------------------------------------------------------------------------------
+// Cross browser border-radius
+//------------------------------------------------------------------------------
+
+@mixin border-radius($radius: 8px) {
+    // Check if we have supplied a unit
+    @if unitless($radius) and $radius != 0 {
+        @warn "Assuming radius #{$radius} to be in pixels";
+        $radius: 1px * $radius;
+    }
+
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-radius-top-left($radius: 8px) {
+    // Check if we have supplied a unit
+    @if unitless($radius) and $radius != 0 {
+        @warn "Assuming radius #{$radius} to be in pixels";
+        $radius: 1px * $radius;
+    }
+
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-radius-top-right($radius: 8px) {
+    // Check if we have supplied a unit
+    @if unitless($radius) and $radius != 0 {
+        @warn "Assuming radius #{$radius} to be in pixels";
+        $radius: 1px * $radius;
+    }
+
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom-left($radius: 8px) {
+    // Check if we have supplied a unit
+    @if unitless($radius) and $radius != 0 {
+        @warn "Assuming radius #{$radius} to be in pixels";
+        $radius: 1px * $radius;
+    }
+
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-bottom-right($radius: 8px) {
+    // Check if we have supplied a unit
+    @if unitless($radius) and $radius != 0 {
+        @warn "Assuming radius #{$radius} to be in pixels";
+        $radius: 1px * $radius;
+    }
+
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-top($radius: 8px) {
+    @include border-radius-top-left($radius);
+    @include border-radius-top-right($radius);
+}
+
+@mixin border-radius-top-force($radius: 8px) {
+    @include border-radius-top-left($radius);
+    @include border-radius-top-right($radius);
+    @include border-radius-bottom-left(0);
+    @include border-radius-bottom-right(0);
+}
+
+@mixin border-radius-bottom($radius: 8px) {
+    @include border-radius-bottom-left($radius);
+    @include border-radius-bottom-right($radius);
+}
+
+@mixin border-radius-bottom-force($radius: 8px) {
+    @include border-radius-bottom-left($radius);
+    @include border-radius-bottom-right($radius);
+    @include border-radius-top-left(0);
+    @include border-radius-top-right(0);
+}
+
+@mixin border-radius-left($radius: 8px) {
+    @include border-radius-top-left($radius);
+    @include border-radius-bottom-left($radius);
+}
+
+@mixin border-radius-right($radius: 8px) {
+    @include border-radius-top-right($radius);
+    @include border-radius-bottom-right($radius);
+}
+

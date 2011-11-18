@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * View
+ *
+ * @category  CodeBlender
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @license   http://codeblender.net/license
+ */
+// Register Placeholders
+$this->title = 'Message Helpers';
+
+// Help Message
+echo $this->message(array(
+    'text' => 'Help Message box',
+    'title' => 'Title'
+));
+
+// Error Message
+echo $this->message(array(
+    'class' => 'error',
+    'text' => 'Error Message box',
+    'title' => 'Title'
+));
+
+// Warning Message
+echo $this->message(array(
+    'class' => 'warning',
+    'text' => 'Warning Message box',
+    'title' => 'Title'
+));
+
+// Success Message
+echo $this->message(array(
+    'class' => 'success',
+    'text' => 'Success Message box',
+    'title' => 'Title'
+));
+
+// Info Message
+echo $this->message(array(
+    'class' => 'info',
+    'text' => 'Info Message box',
+    'title' => 'Title'
+));

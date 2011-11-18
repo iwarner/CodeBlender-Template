@@ -1,0 +1,6 @@
+// Gives the element has-layout in IE. By switching to inline-block
+// it will make the element haslayout, then we just switch it back.
+// Alternatives are: zoom:1; overflow:anything; (IE7+), float, position:absolute;
+@mixin has-layout {
+    *zoom: 1; // IE6/7 Fix
+}

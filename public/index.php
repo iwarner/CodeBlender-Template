@@ -9,7 +9,7 @@
  * @license   http://codeblender.net/license
  */
 
-// Define application environment - this should be setup in the Apache Virtualhost
+// Define application environment
 defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 
 // Define Path Constants
