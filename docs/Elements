@@ -1,0 +1,135 @@
+INTRODUCTION
+------------
+
+    This file outlines the elements contained on a page and how to customise
+    these.
+
+LOGO
+----
+
+    This should be a transparent ping.
+    The name and location of the logo is contained within public stylesheet.
+
+TOP MENU
+--------
+
+    Generated from the navigation array in the application.ini
+
+    Adding the flag:
+        resources.navigation.pages.contact.topmenu = 1
+    to a navigation element will place it on the Top Menu, and remove it from the main navigation.
+
+    The top menu uses the custom topmenu.phtml partial in the layout selected.
+
+    This also utilises the language file for the naming of each link.
+
+NAVIGATION TABS
+---------------
+
+    Generated from the navigation array in the application.ini
+
+    The menu uses the custom menu.phtml partial in the layout selected.
+
+    This also utilises the language file for the naming of each link.
+
+CONTENT AREA
+------------
+
+    MAIN CONTENT
+    ------------
+
+        HEADING
+        -------
+
+        SNAPSHOT
+        --------
+
+    SIDE BAR
+    --------
+
+        SOCIAL ELEMENTS
+        ---------------
+
+        FEATURE LIST
+        ------------
+
+    FOOTER
+    ------
+
+        Quotes if required
+
+            Admin administered quotes
+
+    COPYRIGHT
+    ---------
+
+BLOG
+----
+
+PORTFOLIO
+---------
+
+    Full Screen
+
+        Produces an intro page that lists eight key projects in two horizontal boxes.
+
+    Sidebar
+
+        Produces an intro page that lists 4 key projects in two horizontal boxes.
+
+    Further projects are simply listed in a smaller grid format.
+
+    This can be controlled via the stylesheet anyway
+
+    Portfolio content can be maintained through the administration console.
+    Data is stored and cached in the project database.
+
+    Data consists of
+
+        Intro
+
+            Heading
+            Subtitle
+            Full page or not flag
+            Button options
+            Sidebar options
+            Screenshots / image: dimensions:
+
+        Profile Page
+
+            Heading
+            Subtitle
+            Link
+            Dates
+            Carousel Images / Videos
+            Project Description
+            Sidebar options
+
+       Data is edited from a datagrid format.
+
+CONTACT FORM
+------------
+
+
+SITE MAP
+--------
+
+LOGIN
+-----
+
+LOGOUT
+------
+
+REGISTER
+--------
+
+LOST DETAILS
+------------
+
+ADMIN
+-----
+
+    Adding /admin to the end of the TLD will take the user to the admin. This will
+    require an admin login account to enter.
+
+

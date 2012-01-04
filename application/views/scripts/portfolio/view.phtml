@@ -1,0 +1,86 @@
+<?php
+/**
+ * View
+ *
+ * @category  CodeBlender
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @license   http://codeblender.net/license
+ */
+$portfolioArray = array(
+    'world-travel-guide' => array(
+        'client' => 'World Travel Guide',
+        'link' => 'http://www.worldtravelguide.net/',
+        'strapline' => 'Consultation and creation of a techincal scoping report for CMS migration.',
+        'intro' => 'Triangle over several days consulted with World Travel Guide about their proposed move from a bespoke CMS to a solution that was both scalable and economic.',
+        'content' => ''
+    ),
+    'nhs-hpv-stars' => array(
+        'client' => 'NHS HPV Application',
+        'link' => 'http://www.bebo.com/HPV',
+        'strapline' => 'Bebo application to raise awareness for the HPV vaccine for teenage girls.',
+        'intro' => 'Triangle was involved at every stage of this application; improving the IA in terms of social engagement and adpating the Flash design to use Papervision 3D',
+        'content' => '
+      		Triangle were contracted by Sapient Nitro to develop a Bebo application to promote the HPV vaccination. With the slogan "arm against cervical cancer". Targeted at teenage girls.<br /><br />
+			Using AMF for the Flash integration; developing the Flash 3D environment utilising paperVision. Encouraging the use of a colour picker to allow a news feed to be dispatched and generally consulting on best practices within the Bebo social network.<br /><br />'
+    ),
+    'pringles-conga' => array(
+        'client' => 'Pringles Conga Facebook Application',
+        'link' => 'http://apps.facebook.com/pringlesconga/',
+        'strapline' => 'Facebook application to enhance the Pringles\' brand. Using a party favourite, the Conga.',
+        'intro' => 'High production Flash application to enable users to place their profile photo onto a 3D rendered Pringles\' chip. The entrant is then added to the conga line.',
+        'content' => ''
+    )
+);
+
+$project = $portfolioArray[$this->project];
+
+// Create the required Meta Elements
+$this->title = 'Triangle Social - Portfolio - ' . $project['client'] . ' - London digital agency';
+$this->headMeta()->setName('description', $this->title);
+$this->headMeta()->setName('keywords', 'Portfolio - ' . $this->project);
+
+$this->ogTitle = $this->title;
+$this->ogDescription = 'Triangle delivers development solutions to meet deadlines, budget and aspirations.';
+$this->ogURL = 'http://www.triangle-solutions.com/lab/portfolio';
+$this->ogImage = '/facebook-logo.jpg';
+
+// Render the Strapline
+echo $this->strapLine($project['strapline']);
+?>
+
+<div id="content">
+
+    <h2><?php echo $project['intro']; ?></h2>
+
+    <h3>Link: <a href="<?php echo $project['link']; ?>"><?php echo $project['client']; ?></a></h3>
+
+    <p><?php echo $project['content']; ?></p>
+
+</div>
+
+<div id="sideColumn">
+
+    <?php
+    echo $this->socialElements();
+    ?>
+
+    <div class="featuresList">
+
+        <ul>
+
+            <li class="featureTwitter">
+                <b>Follow us on Twitter</b>. To keep up with the latest goings on.<br />
+                <a href="http://twitter.com/SocialTriangle" title="Follow Triangle on Twitter.">Follow Triangle on Twitter.</a>
+            </li>
+
+            <li class="featureFacebook">
+                <b>Join our Facebook page</b>.<br />
+                <a href="http://www.facebook.com/pages/Triangle-Solutions-Ltd/11174821836" title="Follow Triangle on Facebook.">Triangle Solutions on Facebook.</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>

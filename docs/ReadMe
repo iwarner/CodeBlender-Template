@@ -14,7 +14,6 @@ Note
 
         127.0.0.1 template.codeblender.net.dev
 
-
 SSH KEY SETUP
 -------------
 
@@ -79,6 +78,7 @@ GIT IGNORE
     /data/logs/*
     /data/sessions/*
     !.gitignore
+    /public/.sass-cache
 
 
 GIT SUBMODULE SETUP

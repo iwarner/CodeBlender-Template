@@ -1,5 +1,4 @@
 <?php
-
 /**
  * CodeBlender
  *
@@ -10,54 +9,21 @@
  */
 
 /**
- * Controller
+ * Helper
  *
  * @category  CodeBlender
  * @package   Template
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-class HelperController extends Zend_Controller_Action
+class Default_View_Helper_Header extends Zend_View_Helper_Abstract
 {
-
     /**
-     * Action
+     * Header
      */
-    public function indexAction()
+    public function header()
     {
-
+        // Create any core page elements
+        $this->view->siteTitle = 'CodeBlender Admin Template';
     }
-
-    /**
-     * Action
-     */
-    public function facebookAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function googleAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function messageAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function socialAction()
-    {
-
-    }
-
 }

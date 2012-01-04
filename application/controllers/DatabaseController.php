@@ -17,7 +17,7 @@
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-class HelperController extends Zend_Controller_Action
+class DatabaseController extends Zend_Controller_Action
 {
 
     /**
@@ -25,39 +25,11 @@ class HelperController extends Zend_Controller_Action
      */
     public function indexAction()
     {
+        $userTable = new Default_Model_DbTable_User();
+        $rowSet = $userTable->fetchAll();
+        $row = $rowSet->current();
 
-    }
-
-    /**
-     * Action
-     */
-    public function facebookAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function googleAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function messageAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function socialAction()
-    {
-
+        Zend_Debug::dump($row->toArray());
     }
 
 }

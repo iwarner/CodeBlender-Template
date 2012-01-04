@@ -1,0 +1,19 @@
+$textColor : #57585a;
+$url       : '';
+
+/** IMPORT GLOBALS **/
+
+@import 'compass/reset';
+@import 'compass/layout.scss';
+@import 'compass/utilities/general/float';
+
+/** IMPORT THEME **/
+
+@import '../theme/default/compass/default.scss';
+
+/** SITE SPECIFIC **/
+
+#head
+{
+    background:url(/images/logo/triangle-solutions-logo.png) no-repeat left;
+}

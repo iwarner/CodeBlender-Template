@@ -1,0 +1,109 @@
+<?php
+/**
+ * View
+ *
+ * @category  CodeBlender
+ * @package   Template
+ * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
+ * @license   http://codeblender.net/license
+ */
+// Create the required Meta Elements
+$this->title = 'Triangle Solutions - Portfolio of recently developed social applications and web sites - London digital agency';
+$this->headMeta()->setName('description', $this->title);
+$this->headMeta()->setName('keywords', 'triangle solutions london digital agency portfolio developed social applications and websites');
+
+$this->ogTitle = 'Triangle Solutions Portfolio';
+$this->ogDescription = 'Triangle delivers development solutions to meet deadlines, budget and aspirations.';
+$this->ogURL = 'http://www.triangle-solutions.com/lab/portfolio';
+$this->ogImage = '/facebook-logo.jpg';
+
+// Render the Strapline
+echo $this->strapLine('Triangle delivers <span class="triangleBlue">development solutions</span> to meet deadlines, budget and aspirations.');
+?>
+
+<div id="content">
+
+    <h2>
+        Triangle has been developing internet solutions for over ten years. Our portfolio highlights several of the latest
+        projects we have been involved in.
+    </h2>
+
+    <div id="portfolio">
+
+        <ul id="portfolioGrid">
+            <?php
+            $portfolioArray = array(
+                array(
+                    'title' => 'World Travel Guide',
+                    'text' => 'Over three days Triangle created an in depth technical scoping report, to help WTG migrate to a new open source CMS.',
+                    'image' => '/portfolio/world-travel-guide.jpg',
+                    'link' => '/portfolio/view/project/world-travel-guide'
+                ),
+                array(
+                    'title' => 'NHS HPV Stars',
+                    'text' => 'Triangle created a Bebo social application to help promote awareness of the HPV vaccine to teenage girls.',
+                    'image' => '/portfolio/nhs-hpv-stars.jpg',
+                    'link' => '/portfolio/view/project/nhs-hpv-stars'
+                ),
+                array(
+                    'title' => 'Pringles Conga',
+                    'text' => 'High production fun Facebook application to promote the Pringles brand. ',
+                    'image' => '/portfolio/pringles-conga.jpg',
+                    'link' => '/portfolio/view/project/pringles-conga'
+                )
+            );
+
+            foreach ($portfolioArray as $k => $v) {
+                ?>
+                <li>
+
+                    <div class="portfolioGroup">
+                        <?php
+                        echo $this->image(array(
+                            'alt' => $v['text'],
+                            'path' => $v['image'],
+                            'url' => $v['link']
+                        ));
+                        ?>
+                    </div>
+
+                    <div class="portfolioToolTip">
+                        <div class="portfolioToolTipTitle"><?php echo $v['title']; ?></div>
+                        <div class="portfolioToolTipText"><?php echo $v['text']; ?></div>
+                        <div class="portfolioToolTipLink"><a href="<?php echo $v['link']; ?>">More Information</a></div>
+                    </div>
+                </li>
+                <?php
+            }
+            ?>
+        </ul>
+
+    </div>
+
+</div>
+
+<div id="sideColumn">
+
+    <?php
+    echo $this->socialElements();
+    ?>
+
+    <div class="featuresList">
+
+        <ul>
+
+            <li class="featureTwitter">
+                <b>Follow us on Twitter</b>. To keep up with the latest goings on.<br />
+                <a href="http://twitter.com/SocialTriangle" title="Follow Triangle on Twitter.">Follow Triangle on Twitter.</a>
+            </li>
+
+            <li class="featureFacebook">
+                <b>Join our Facebook page</b>.<br />
+                <a href="http://www.facebook.com/pages/Triangle-Solutions-Ltd/11174821836" title="Follow Triangle on Facebook.">Triangle Solutions on Facebook.</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>

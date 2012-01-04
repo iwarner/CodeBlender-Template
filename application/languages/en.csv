@@ -1,4 +1,38 @@
 // NAVIGATION //
 
 "navHome","Home"
-"navHomeTitle","CodeBlender - Zend Framework Specialists"
+"navHomeTitle","Zend Framework Specialists"
+
+"navHelper","Helpers"
+"navHelperTitle","Helpers"
+
+"navDatabase","Database"
+"navDatabaseTitle","Database"
+
+"navSiteMap","Site Map"
+"navSiteMapTitle","Contact"
+
+"navContact","Contact"
+"navContactTitle","Site Map"
+
+"navRegister","Register"
+"navRegisterTitle","Register"
+
+"navLogin","Login"
+"navLoginTitle","Login"
+
+"navLogout","Logout"
+"navLogoutTitle","Logout"
+
+"navSettings","Settings"
+"navSettingsTitle","Settings"
+
+"navPortfolio","Portfolio"
+"navPortfolioTitle","Portfolio"
+
+// LOGIN FORM //
+
+"loginEmail","Email"
+"loginPassword","Password"
+"loginRemember","Remember Me"
+"loginLogIn","Log In"

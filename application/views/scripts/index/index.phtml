@@ -3,9 +3,127 @@
  * View
  *
  * @category  CodeBlender
- * @package   Template
+ * @package   TriangleSolutions
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-// Register Placeholders
-$this->title = 'Dashboard';
+// Create the required Meta Elements
+$this->title = 'Triangle Solutions - Social Facebook application development - PHP MySQL Developers - London digital agency';
+$this->headMeta()->setName('description', $this->title);
+$this->headMeta()->setName('keywords', 'triangle solutions london digital agency social Facebook application development php mysql developers');
+
+$this->ogTitle = 'Triangle Solutions';
+$this->ogDescription = 'Triangle Solutions, social applications; mobile SMS; e-commerce consultation and development';
+$this->ogURL = 'http://www.triangle-solutions.com/';
+$this->ogImage = '/facebook-logo.jpg';
+
+// Render the Strap line
+echo $this->strapLine('Triangle Solutions, <span class="triangleBlue">social applications</span>; mobile SMS; e-commerce consultation and development');
+?>
+
+<div id="content">
+
+    <h2>
+        Triangle Solutions is a full service creative development house. Specialising in social pages and applications;
+		games;  brand building sites and SMS revenue streams.
+    </h2>
+
+    <?php
+    echo $this->snapShot(array(
+        'alt' => 'Facebook page development',
+        'caption' => 'Facebook pages provide a company an instant and easy way to connect with customers and and their social graph.',
+        'path' => '/snapshot1.png'
+    ));
+    ?>
+
+    <h3>Focus</h3>
+
+    <p>
+        Our focus is on the production of web solutions for businesses or individuals to help them
+        realise the potential of the Internet through
+        <a href="/social" title="Social applications">social applications</a>; social marketing; mobile SMS services;
+        e-commerce and email.
+    </p>
+
+    <p>
+        We can help guide your project from inception to reality, consulting
+        throughout this process on best practices and how the latest technology can assist to simplify any problems that may arise.
+    </p>
+
+    <h3>Full Service</h3>
+
+    <p>
+        Triangle are "creative" developers. Introduce us early on into the ideas phase and we can help guide this process based
+        on prior experience and knowledge of what is feasible and cool. We can then develop the technical documentation necessary
+        to provide a smooth development cycle. Lastly we can provide
+        <a href="/hosting" title="Hosting">custom hosting solutions</a> or host the project on our cutting edge servers.
+    </p>
+
+    <?php
+    echo $this->snapShot(array(
+        'alt' => 'Wire frames with a purpose.',
+        'caption' => 'When Triangle consult on a project we produce wire frames that are clear and concise.',
+        'path' => '/facebook-feed-dialog.png'
+    ));
+    ?>
+
+    <h3>Simplicity</h3>
+
+    <p>
+        Triangle aims to cut down the acronym's and barriers to entry. Providing a simple approach to what may be a complex project.
+	    We will communicate at every stage, investing out time to make sure your investment with us is a success!
+    </p>
+
+    <h3>Get In Touch With Triangle</h3>
+
+    <p>
+        We would love to speak to you further about how we can make your brand social. Please feel free to email us,
+        drop us a line. Please <a href="/core/contact" title="Contact Us">Contact Us</a> with any questions you may have.
+    </p>
+
+</div>
+
+<div id="sideColumn">
+
+    <?php
+    echo $this->socialElements();
+    ?>
+
+    <div class="featuresList">
+
+        <ul>
+
+            <li class="featureTwitter">
+                <b>Follow us on Twitter</b>. To keep up with the latest goings on at Triangle HQ.<br /><br />
+            </li>
+
+            <li class="featureFacebook">
+                <b>Social Development</b>. Networks such as Facebook can be utilised for building strong and instant brand awareness. Creation of
+                pages and applications coupled with intelligent seeding can assist traditional campaigns. Utilising analytics we can track
+                and target further promotions to this user base. <a href="/social" title="Social development">More...</a>
+            </li>
+
+            <li class="feature2">
+                <b>Telecoms Solutions</b>. Triangle has a core niche in mobile revenue, having developed Logotribe, the first affiliated
+                ring tone site in the UK. We now maintain systems that send out hundreds of thousands of SMS daily. We can provide bulk
+                and premium short code routing for any campaigns. Also IVR and mobile billing solutions.
+                <a href="/telecom" title="Mobile SMS development">More...</a>
+            </li>
+
+            <li class="feature4">
+                <b>Hosting</b>. Triangle leverages Amazon's cloud services to offer scalable; redundant and resilient hosting. We can place your
+                site onto our pre-configured cluster or create a bespoke system. Amazon can provide huge storage facilities;
+                a full content delivery network and server instances in the US or Europe.
+                <a href="/hosting" title="Hosting">More...</a>
+            </li>
+
+            <li class="feature3">
+                <b>Consultation</b>. Triangle can consult at every level of a project cycle. Utilising us from the inception could help
+                steer the project in terms of social, technical and technology awareness.
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>

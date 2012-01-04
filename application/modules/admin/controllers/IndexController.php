@@ -17,7 +17,7 @@
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-class HelperController extends Zend_Controller_Action
+class Admin_IndexController extends Zend_Controller_Action
 {
 
     /**
@@ -25,39 +25,8 @@ class HelperController extends Zend_Controller_Action
      */
     public function indexAction()
     {
-
-    }
-
-    /**
-     * Action
-     */
-    public function facebookAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function googleAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function messageAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function socialAction()
-    {
-
+        // Layout
+        Zend_Layout::getMvcInstance()->setLayoutPath(APPLICATION_PATH . '/layouts/scripts/admin');
     }
 
 }

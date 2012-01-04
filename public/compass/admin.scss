@@ -1,0 +1,14 @@
+$textColor : #57585a;
+$url       : '';
+
+/** IMPORT GLOBALS **/
+
+@import 'compass/reset';
+@import 'compass/layout.scss';
+@import 'compass/utilities/general/float';
+
+/** IMPORT THEME **/
+
+@import '../theme/admin/compass/admin.scss';
+
+/** SITE SPECIFIC **/

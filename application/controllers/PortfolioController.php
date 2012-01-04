@@ -17,7 +17,7 @@
  * @copyright Copyright (c) 2011 Triangle Solutions Ltd. (http://www.triangle-solutions.com/)
  * @license   http://codeblender.net/license
  */
-class HelperController extends Zend_Controller_Action
+class PortfolioController extends Zend_Controller_Action
 {
 
     /**
@@ -25,39 +25,20 @@ class HelperController extends Zend_Controller_Action
      */
     public function indexAction()
     {
+        // Portfolio Table
+        $portfolioTable = new Default_Model_DbTable_Portfolio();
 
+        // Get All
+        $rowSet = $portfolioTable->getAll();
     }
 
     /**
      * Action
      */
-    public function facebookAction()
+    public function viewAction()
     {
-
-    }
-
-    /**
-     * Action
-     */
-    public function googleAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function messageAction()
-    {
-
-    }
-
-    /**
-     * Action
-     */
-    public function socialAction()
-    {
-
+        // Invoke the Config
+        $this->view->project = $this->_getParam('project');
     }
 
 }

@@ -1,4 +1,0 @@
-
-@mixin width-minus-padding($targetWidth, $leftPadding: 0, $rightPadding: 0) {
-    width: $targetWidth - $leftPadding - $rightPadding;
-}
