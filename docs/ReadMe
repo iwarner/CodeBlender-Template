@@ -57,8 +57,32 @@ New Git Repository
 
 Clone Repository
 
-    git clone git@github.com:iwarner/CodeBlender-Template.git www
-    git branch --set-upstream master origin/master
+    Create a new github repository
+
+    Clone the Template
+
+        git clone git@github.com:iwarner/CodeBlender-Template.git www
+
+    Edit the .git/config file
+    change the repo url to the new repository
+
+    [remote "origin"]
+        fetch = +refs/heads/*:refs/remotes/origin/*
+        url = git@github.com:YOURNAME/bar.git #replace foo with bar
+
+    Optionally add the Template as an upstream source
+
+        git remote add upstream git@github.com:iwarner/CodeBlender-Template.git
+
+    Finally, push your new repository up to GitHub:
+
+    git push -u origin master
+
+    Now you can push/pull from your new repo.
+    You should also be able to merge upstream changes using the following command.
+
+    git fetch upstream
+    git merge upstream/master
 
 Commands
 
@@ -94,6 +118,10 @@ To pull from the master on all submodules from the root user:
 
     git submodule foreach git pull -u origin master
     git submodule foreach git push -u origin master
+
+To switch the branch to master go into each submodule and run the command
+
+    git checkout master
 
 Repository must be a GIT repository to activate submodules
 
